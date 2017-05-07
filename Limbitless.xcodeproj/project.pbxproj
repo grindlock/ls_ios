@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		497D77E01EBEECB60008FAB0 /* MoveContentFor Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497D77DF1EBEECB60008FAB0 /* MoveContentFor Keyboard.swift */; };
 		49BAE16B1EBC133A006AA1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAE16A1EBC133A006AA1EF /* AppDelegate.swift */; };
 		49BAE16D1EBC133A006AA1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAE16C1EBC133A006AA1EF /* ViewController.swift */; };
 		49BAE1701EBC133B006AA1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE16E1EBC133B006AA1EF /* Main.storyboard */; };
 		49BAE1721EBC133B006AA1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE1711EBC133B006AA1EF /* Assets.xcassets */; };
 		49BAE1751EBC133B006AA1EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAE1731EBC133B006AA1EF /* LaunchScreen.storyboard */; };
+		49BAE17F1EBC1ECA006AA1EF /* RoundButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAE17C1EBC1EC9006AA1EF /* RoundButtonWithShadow.swift */; };
+		49BAE1801EBC1ECA006AA1EF /* RoundCornersAndShadowForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAE17D1EBC1ECA006AA1EF /* RoundCornersAndShadowForView.swift */; };
+		49BAE1811EBC1ECA006AA1EF /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAE17E1EBC1ECA006AA1EF /* TextFieldCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		497D77DF1EBEECB60008FAB0 /* MoveContentFor Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoveContentFor Keyboard.swift"; sourceTree = "<group>"; };
 		49BAE1671EBC133A006AA1EF /* Limbitless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limbitless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAE16A1EBC133A006AA1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BAE16C1EBC133A006AA1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		49BAE1711EBC133B006AA1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BAE1741EBC133B006AA1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BAE1761EBC133B006AA1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BAE17C1EBC1EC9006AA1EF /* RoundButtonWithShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButtonWithShadow.swift; sourceTree = "<group>"; };
+		49BAE17D1EBC1ECA006AA1EF /* RoundCornersAndShadowForView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornersAndShadowForView.swift; sourceTree = "<group>"; };
+		49BAE17E1EBC1ECA006AA1EF /* TextFieldCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				49BAE16E1EBC133B006AA1EF /* Main.storyboard */,
 				49BAE1711EBC133B006AA1EF /* Assets.xcassets */,
 				49BAE1731EBC133B006AA1EF /* LaunchScreen.storyboard */,
+				49BAE17C1EBC1EC9006AA1EF /* RoundButtonWithShadow.swift */,
+				49BAE17D1EBC1ECA006AA1EF /* RoundCornersAndShadowForView.swift */,
+				49BAE17E1EBC1ECA006AA1EF /* TextFieldCustom.swift */,
 				49BAE1761EBC133B006AA1EF /* Info.plist */,
+				497D77DF1EBEECB60008FAB0 /* MoveContentFor Keyboard.swift */,
 			);
 			path = Limbitless;
 			sourceTree = "<group>";
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BAE1801EBC1ECA006AA1EF /* RoundCornersAndShadowForView.swift in Sources */,
 				49BAE16D1EBC133A006AA1EF /* ViewController.swift in Sources */,
+				497D77E01EBEECB60008FAB0 /* MoveContentFor Keyboard.swift in Sources */,
 				49BAE16B1EBC133A006AA1EF /* AppDelegate.swift in Sources */,
+				49BAE1811EBC1ECA006AA1EF /* TextFieldCustom.swift in Sources */,
+				49BAE17F1EBC1ECA006AA1EF /* RoundButtonWithShadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z6YN7RJW4G;
 				INFOPLIST_FILE = Limbitless/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serge.Limbitless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z6YN7RJW4G;
 				INFOPLIST_FILE = Limbitless/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serge.Limbitless;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +322,7 @@
 				49BAE17B1EBC133B006AA1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
