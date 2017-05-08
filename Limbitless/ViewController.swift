@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //bottomConstraint = serial_code.layoutMarginsGuide.
         
         NotificationCenter.default.addObserver(self, selector: #selector(handle_keyboard(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         
@@ -50,6 +51,7 @@ class ViewController: UIViewController {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         active_field = nil
+        self.view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -57,27 +59,48 @@ class ViewController: UIViewController {
         return true
     }
     
+    //move the textfield when keyboard cover them
     func handle_keyboard(notification: Notification){
+        
         if let userInfo = notification.userInfo{
-            let keyboard_size = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
+            
+            let keyboard_size = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            
+          
+            
             let isKeyboardShowing = notification.name == Notification.Name.UIKeyboardWillShow
             
-            //self.view.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: isKeyboardShowing ? (self.view.window?.frame.origin.y)! + (self.view.window?.frame.height)! - ((active_field?.frame.origin.y)! + (keyboard_size?.height)!): self.view.frame.height + (keyboard_size?.height)!)
-            
             let ori = active_field?.frame.origin.y
+         
             
-            active_field?.frame.origin.y = isKeyboardShowing ? (keyboard_size?.height)! : ori!
+            if self.active_field?.tag == 0{
+                self.active_field?.frame.origin.y = isKeyboardShowing ? keyboard_size.origin.y - (self.active_field?.frame.height)! - 15 : ori!
+            }
+            
+            if self.active_field?.tag == 1{
+                 self.active_field?.frame.origin.y = isKeyboardShowing ? keyboard_size.origin.y - (self.active_field?.frame.height)! - 15 : ori!
+                //self.serial_code?.frame.origin.y = (self.active_field?.frame.origin.y)! - 70
+                if !self.serial_code.isHidden{
+                    self.serial_code.isHidden = true
+                }
+                else{
+                    self.serial_code.isHidden = false
+                }
+            }
+            else if (self.active_field?.tag == 2){
+                 self.active_field?.frame.origin.y = isKeyboardShowing ? keyboard_size.origin.y - (self.active_field?.frame.height)! - 15 : ori!
                 
-            
+                self.email?.frame.origin.y = (self.active_field?.frame.origin.y)! - ((self.email?.frame.height)! + 30)
+                
+                self.serial_code?.frame.origin.y = (self.email?.frame.origin.y)!  - ((self.serial_code?.frame.height)! + 30)
+                
+            }
             
             UIView.animate(withDuration: 0, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
             }, completion: { (completed) in
                 
                 //scrool the other things in the view
-                if self.active_field?.tag == 1{
-                    self.serial_code?.frame.origin.y = (self.active_field?.frame.origin.y)! - 70
-                }
                 
                 
             })
@@ -86,7 +109,5 @@ class ViewController: UIViewController {
             
         }
     }
-    
-//(self.view.window?.frame.height)!
 }
 
