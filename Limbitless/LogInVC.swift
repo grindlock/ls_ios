@@ -3,13 +3,13 @@
 //  Limbitless
 //
 //  Created by Sergio Perez-Aponte on 5/4/17.
-//  Copyright © 2017 Sergio Perez-Aponte. All rights reserved.
+//  Copyright © 2017 Limbitless Solutions. All rights reserved.
 //
 
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class LogInVC: UIViewController {
 
     @IBOutlet weak var scroll_view: UIScrollView!
     @IBOutlet weak var serial_code: UITextField!

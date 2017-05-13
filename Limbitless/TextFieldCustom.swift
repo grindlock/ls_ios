@@ -9,9 +9,23 @@
 import UIKit
 import QuartzCore
 
-@IBDesignable
-extension UITextField {
 
+@IBDesignable class TextFieldCustom: UITextField {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.masksToBounds = true
+        //self.clipsToBounds = true
+    }
+    
+
+    @IBInspectable var roundButton: Bool = false{
+        didSet{
+            if roundButton == true{
+                self.layer.cornerRadius = frame.size.height / 2
+            }
+        }
+    }
         
         @IBInspectable var cornerRadius: CGFloat{
             get{
@@ -67,21 +81,17 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var shadowRadius: CGFloat{
-        get{
-            return layer.shadowRadius
-        }
-        set{
-            layer.shadowRadius = newValue
+    @IBInspectable var shadowRadius: CGFloat = 0.0{
+        
+        didSet{
+            self.layer.shadowRadius = shadowRadius
         }
     }
     
-    @IBInspectable var shadowOpacity: Float{
-        get{
-                return layer.shadowOpacity
-        }
-        set{
-            layer.shadowOpacity = newValue
+    @IBInspectable var shadowOpacity: Float = 0.0{
+        
+        didSet{
+            self.layer.shadowOpacity = shadowOpacity
         }
     }
 

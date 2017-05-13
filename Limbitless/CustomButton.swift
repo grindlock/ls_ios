@@ -1,15 +1,22 @@
 //
-//  RoundCornersAndShadowForView.swift
+//  RoundButtonWithShadow.swift
 //  shpe_test
 //
-//  Created by Sergio Perez-Aponte on 3/17/17.
+//  Created by Sergio Perez-Aponte on 2/27/17.
 //  Copyright © 2017 Sergio Perez-Aponte. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable class RoundCornersAndShadowForView: UIView {
+@IBDesignable class CustomButton: UIButton {
     
+    /*
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
     @IBInspectable var roundButton: Bool = false{
         didSet{
             if roundButton == true{
@@ -20,7 +27,7 @@ import UIKit
     
     @IBInspectable var CornerRadius: CGFloat = 0.0{
         didSet{
-            self.layer.cornerRadius = CornerRadius
+           self.layer.cornerRadius = CornerRadius
         }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0{
@@ -53,25 +60,17 @@ import UIKit
     }
     
     @IBInspectable var shadowRadius: CGFloat = 0.0{
-        
+
         didSet{
             self.layer.shadowRadius = shadowRadius
         }
     }
     
     @IBInspectable var shadowOpacity: Float = 0.0{
-        
+       
         didSet{
             self.layer.shadowOpacity = shadowOpacity
         }
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }
