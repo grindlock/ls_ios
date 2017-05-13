@@ -13,9 +13,10 @@ class LogInVC: UIViewController {
 
     @IBOutlet weak var scroll_view: UIScrollView!
     @IBOutlet weak var serial_code: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var log_reg_btn: UIButton!
+    @IBOutlet weak var email: TextFieldCustom!
+    @IBOutlet weak var password: TextFieldCustom!
+    @IBOutlet weak var reg_btn: CustomButton!
+    @IBOutlet weak var log_btn: CustomButton!
     
     weak var bottomConstraint:NSLayoutConstraint?
     weak var active_field: UITextField?

@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-0B-hsw">
                                 <rect key="frame" x="24" y="506" width="366" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-Sj-Hdj" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-Sj-Hdj" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -34,7 +34,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -59,12 +59,18 @@
                                                 <real key="value" value="35"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Pu2-Ee-hEm"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="go6-qm-pLS" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="go6-qm-pLS" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="366" height="40"/>
                                         <color key="backgroundColor" red="0.23777356743812561" green="0.66797274351119995" blue="0.83967554569244385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -74,7 +80,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -99,7 +105,13 @@
                                                 <real key="value" value="35"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="gMC-2U-Aqb"/>
                                         </connections>
@@ -146,6 +158,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maL-7Z-516" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
                                                 <rect key="frame" x="187" y="0.0" width="179" height="40"/>
@@ -186,6 +201,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                                </variation>
                                                 <connections>
                                                     <segue destination="uSN-j3-eOf" kind="presentation" identifier="register" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="3tC-lL-icz"/>
                                                 </connections>
@@ -252,9 +270,10 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="email" destination="go6-qm-pLS" id="pJ6-5X-lV0"/>
-                        <outlet property="log_reg_btn" destination="maL-7Z-516" id="TWO-Ln-En2"/>
-                        <outlet property="password" destination="9f9-Sj-Hdj" id="PEB-d2-Ec3"/>
+                        <outlet property="email" destination="9f9-Sj-Hdj" id="Tje-Vs-89Q"/>
+                        <outlet property="log_btn" destination="RSd-0M-FxZ" id="7jT-0X-luL"/>
+                        <outlet property="password" destination="go6-qm-pLS" id="mdg-B9-wX1"/>
+                        <outlet property="reg_btn" destination="maL-7Z-516" id="qga-z3-MJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -264,7 +283,7 @@
         <!--Sign UpVC-->
         <scene sceneID="zN5-ok-Mbb">
             <objects>
-                <viewController id="uSN-j3-eOf" customClass="SignUpVC" sceneMemberID="viewController">
+                <viewController id="uSN-j3-eOf" customClass="SignUpVC" customModule="Limbitless" customModuleProvider="target" sceneMemberID="viewController">
                     <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="SFP-5N-GiQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -275,15 +294,17 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-TK-dlu" customClass="RoundCornersAndShadowForView" customModule="Limbitless" customModuleProvider="target">
                                     <rect key="frame" x="26" y="80" width="362" height="283"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-Bh-Jt2" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="47" width="330" height="40"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Serial Code" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-Bh-Jt2" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="50" width="330" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="TnU-ss-9OU"/>
+                                                <constraint firstAttribute="height" constant="40" id="TnU-ss-9OU">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                </constraint>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -292,17 +313,25 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            </variation>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-mc-A1i" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="102" width="330" height="40"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-mc-A1i" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="105" width="330" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="mmx-Or-kiJ"/>
+                                                <constraint firstAttribute="height" constant="40" id="mmx-Or-kiJ">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                </constraint>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -311,17 +340,25 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            </variation>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-2y-SXM" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="157" width="330" height="40"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-2y-SXM" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="160" width="330" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="KqE-q3-epG"/>
+                                                <constraint firstAttribute="height" constant="40" id="KqE-q3-epG">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                </constraint>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -330,15 +367,24 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            </variation>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6u-D1-C8r" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="212" width="330" height="40"/>
+                                            <rect key="frame" x="16" y="215" width="330" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="vTt-m3-hSm"/>
+                                                <constraint firstAttribute="height" constant="40" id="vTt-m3-hSm">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                </constraint>
                                             </constraints>
-                                            <state key="normal" title="Button">
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <state key="normal" title="Create Account">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -350,15 +396,25 @@
                                                     <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="createUserAccount:" destination="uSN-j3-eOf" eventType="touchUpInside" id="Epo-B8-B8R"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-9X-ScZ" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="332" y="-18" width="40" height="40"/>
+                                            <rect key="frame" x="332" y="-15" width="40" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="BGD-tU-DMH"/>
-                                                <constraint firstAttribute="height" constant="40" id="O9Z-Rw-26E"/>
+                                                <constraint firstAttribute="width" constant="40" id="BGD-tU-DMH">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                </constraint>
+                                                <constraint firstAttribute="height" constant="40" id="O9Z-Rw-26E">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <state key="normal" title="X">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -383,34 +439,64 @@
                                                     <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="72"/>
+                                            </variation>
+                                            <connections>
+                                                <action selector="cancelRegistration:" destination="uSN-j3-eOf" eventType="touchUpInside" id="oRf-Z1-9KY"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-Yy-Ugu">
-                                            <rect key="frame" x="93.666666666666657" y="1" width="176.33333333333334" height="36"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <rect key="frame" x="93.666666666666657" y="8" width="176.33333333333334" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.00042547433989999998" green="0.22889432309999999" blue="0.41364270450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="WOO-Yy-Ugu" firstAttribute="top" secondItem="q9R-TK-dlu" secondAttribute="top" constant="8" id="1M9-SU-4uq"/>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="leading" secondItem="q6u-D1-C8r" secondAttribute="leading" id="1r3-K3-GuQ"/>
-                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="q9R-TK-dlu" secondAttribute="top" constant="47" id="8kU-jM-Auq"/>
-                                        <constraint firstItem="q6u-D1-C8r" firstAttribute="top" secondItem="lNo-2y-SXM" secondAttribute="bottom" constant="15" id="9W3-qI-LaJ"/>
+                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="q9R-TK-dlu" secondAttribute="top" constant="50" id="8kU-jM-Auq">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="124"/>
+                                        </constraint>
+                                        <constraint firstItem="q6u-D1-C8r" firstAttribute="top" secondItem="lNo-2y-SXM" secondAttribute="bottom" constant="15" id="9W3-qI-LaJ">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                        </constraint>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="leading" secondItem="SLu-mc-A1i" secondAttribute="leading" id="9ak-pT-Rih"/>
-                                        <constraint firstAttribute="trailing" secondItem="5pd-9X-ScZ" secondAttribute="trailing" constant="-10" id="FtW-5w-g3h"/>
-                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="leading" secondItem="q9R-TK-dlu" secondAttribute="leading" constant="16" id="HMa-3M-0gf"/>
-                                        <constraint firstItem="5pd-9X-ScZ" firstAttribute="leading" secondItem="WOO-Yy-Ugu" secondAttribute="trailing" constant="62" id="Hsa-uU-5WH"/>
+                                        <constraint firstAttribute="trailing" secondItem="5pd-9X-ScZ" secondAttribute="trailing" constant="-10" id="FtW-5w-g3h">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                                        </constraint>
+                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="leading" secondItem="q9R-TK-dlu" secondAttribute="leading" constant="16" id="HMa-3M-0gf">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                        </constraint>
+                                        <constraint firstItem="5pd-9X-ScZ" firstAttribute="leading" secondItem="WOO-Yy-Ugu" secondAttribute="trailing" constant="62" id="Hsa-uU-5WH">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="62"/>
+                                        </constraint>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="centerX" secondItem="WOO-Yy-Ugu" secondAttribute="centerX" id="L9q-KL-M3r"/>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="trailing" secondItem="q6u-D1-C8r" secondAttribute="trailing" id="MGZ-yk-DHT"/>
-                                        <constraint firstItem="lNo-2y-SXM" firstAttribute="top" secondItem="SLu-mc-A1i" secondAttribute="bottom" constant="15" id="TJE-Ga-zDc"/>
+                                        <constraint firstItem="lNo-2y-SXM" firstAttribute="top" secondItem="SLu-mc-A1i" secondAttribute="bottom" constant="15" id="TJE-Ga-zDc">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                        </constraint>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="leading" secondItem="lNo-2y-SXM" secondAttribute="leading" id="TRu-w6-eEw"/>
-                                        <constraint firstItem="SLu-mc-A1i" firstAttribute="top" secondItem="Fc4-Bh-Jt2" secondAttribute="bottom" constant="15" id="WrL-IJ-pgc"/>
+                                        <constraint firstItem="SLu-mc-A1i" firstAttribute="top" secondItem="Fc4-Bh-Jt2" secondAttribute="bottom" constant="15" id="WrL-IJ-pgc">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                        </constraint>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="trailing" secondItem="SLu-mc-A1i" secondAttribute="trailing" id="YKq-4X-Fx5"/>
-                                        <constraint firstAttribute="height" constant="283" id="fVw-NH-iia"/>
+                                        <constraint firstAttribute="height" constant="283" id="fVw-NH-iia">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                        </constraint>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="centerX" secondItem="q9R-TK-dlu" secondAttribute="centerX" id="pFa-cI-cWs"/>
                                         <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="trailing" secondItem="lNo-2y-SXM" secondAttribute="trailing" id="wFf-Kp-AdF"/>
-                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="WOO-Yy-Ugu" secondAttribute="bottom" constant="10" id="wis-5i-01X"/>
-                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="5pd-9X-ScZ" secondAttribute="bottom" constant="25" id="yDu-dz-so8"/>
+                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="WOO-Yy-Ugu" secondAttribute="bottom" constant="10" id="wis-5i-01X">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                        </constraint>
+                                        <constraint firstItem="Fc4-Bh-Jt2" firstAttribute="top" secondItem="5pd-9X-ScZ" secondAttribute="bottom" constant="25" id="yDu-dz-so8">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                        </constraint>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
@@ -440,17 +526,29 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="q9R-TK-dlu" firstAttribute="top" secondItem="aRW-Aa-9Zz" secondAttribute="top" constant="80" id="UVz-28-Z06"/>
-                                <constraint firstItem="q9R-TK-dlu" firstAttribute="leading" secondItem="aRW-Aa-9Zz" secondAttribute="leading" constant="26" id="f1X-AG-VnD"/>
+                                <constraint firstItem="q9R-TK-dlu" firstAttribute="top" secondItem="aRW-Aa-9Zz" secondAttribute="top" constant="80" id="UVz-28-Z06">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="240"/>
+                                </constraint>
+                                <constraint firstItem="q9R-TK-dlu" firstAttribute="leading" secondItem="aRW-Aa-9Zz" secondAttribute="leading" constant="26" id="f1X-AG-VnD">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="110"/>
+                                </constraint>
                                 <constraint firstItem="q9R-TK-dlu" firstAttribute="centerX" secondItem="aRW-Aa-9Zz" secondAttribute="centerX" id="plv-7B-QwM"/>
                             </constraints>
                         </view>
                         <blurEffect style="regular"/>
                     </visualEffectView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="close" destination="5pd-9X-ScZ" id="9c3-ab-RD7"/>
+                        <outlet property="email" destination="SLu-mc-A1i" id="PsF-Qs-Mx8"/>
+                        <outlet property="password" destination="lNo-2y-SXM" id="ZNz-cQ-pqD"/>
+                        <outlet property="reg_btn" destination="q6u-D1-C8r" id="zAI-6m-1T0"/>
+                        <outlet property="serial_code" destination="Fc4-Bh-Jt2" id="qn6-Wo-SZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ia3-n4-Pai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688.125" y="-136.25"/>
+            <point key="canvasLocation" x="687.890625" y="-136.60322108345534"/>
         </scene>
     </scenes>
     <resources>
