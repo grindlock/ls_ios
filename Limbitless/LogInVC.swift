@@ -11,31 +11,32 @@ import Foundation
 
 class LogInVC: UIViewController {
 
-    @IBOutlet weak var scroll_view: UIScrollView!
-    @IBOutlet weak var serial_code: UITextField!
     @IBOutlet weak var email: TextFieldCustom!
     @IBOutlet weak var password: TextFieldCustom!
     @IBOutlet weak var reg_btn: CustomButton!
     @IBOutlet weak var log_btn: CustomButton!
+    @IBOutlet weak var topStackView: UIStackView!
+    @IBOutlet weak var topStackViewTopConstraint: NSLayoutConstraint!
+    var topStackViewTopConstraintConstant:CGFloat!
     
-    weak var bottomConstraint:NSLayoutConstraint?
-    weak var active_field: UITextField?
+
     
-    
-    
-    
-    
-    
-    //weak var activeField: UITextField?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //bottomConstraint = serial_code.layoutMarginsGuide.
         
-        NotificationCenter.default.addObserver(self, selector: #selector(handle_keyboard(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        topStackViewTopConstraintConstant = topStackViewTopConstraint.constant
+        print("CONSTANT  \(topStackViewTopConstraintConstant)")
         
-         NotificationCenter.default.addObserver(self, selector: #selector(handle_keyboard(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(dismiss)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: self.view.window)
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: self.view.window)
    
     }
 
@@ -44,9 +45,75 @@ class LogInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        active_field = textField
+    
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    func keyboardWillShow(sender: Notification){
+        let userInfo = sender.userInfo
+    
+        let keyboardSize = (userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
         
+       let offset: CGSize = (userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        
+        if keyboardSize?.height == offset.height{
+            if self.view.frame.origin.y == 0{
+                UIView.animate(withDuration: 0.1, animations: { ()-> Void in
+                    
+                    self.topStackViewTopConstraint.constant -= (keyboardSize?.height)!/2
+                    
+                    self.view.frame.origin.y -= (keyboardSize?.height)! - self.email.frame.origin.y
+                    
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }else{
+            UIView.animate(withDuration: 0.1, animations: {() -> Void in
+            
+            self.topStackViewTopConstraint.constant += (keyboardSize?.height)! - offset.height
+            self.view.frame.origin.y += (keyboardSize?.height)! - offset.height})
+            self.view.layoutIfNeeded()
+        }
+                   // self.topStackViewTopConstraint.constant = 16 - keyboardSize.height
+                   // self.view.layoutIfNeeded()
+                
+        
+        
+        
+        print(self.view.frame.origin.y)
+    }
+    
+    func keyboardWillHide(sender: Notification){
+         let userInfo = sender.userInfo
+        
+        let keyboardSize: CGSize = (userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
+        
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y += keyboardSize.height
+            self.topStackViewTopConstraint.constant = topStackViewTopConstraintConstant //+= keyboardSize.height * 2
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: self.view.window)
+         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: self.view.window)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if let nextTextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{
+            nextTextField.becomeFirstResponder()
+        }
+        else{
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+    
+    /*func textFieldDidBeginEditing(_ textField: UITextField) {
+        active_field = textField
+     
         
     }
     
@@ -109,6 +176,6 @@ class LogInVC: UIViewController {
             
             
         }
-    }
+    }*/
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,14 +18,39 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-Bk-DYO">
+                                <rect key="frame" x="24" y="36" width="327" height="162"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="6L9-od-Fx6">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="CSW-Nc-yNN">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limbitles Solutions" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-q8-Oqu">
+                                        <rect key="frame" x="0.0" y="130" width="327" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="vtc-Ww-VNS">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="32"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="112"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" alignment="fill" baselineRelativeArrangement="NO" distribution="fillEqually" spacing="0.0"/>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-0B-hsw">
-                                <rect key="frame" x="24" y="506" width="366" height="180"/>
+                                <rect key="frame" x="24" y="437" width="327" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-Sj-Hdj" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Czo-L4-git">
@@ -71,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="go6-qm-pLS" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="327" height="40"/>
                                         <color key="backgroundColor" red="0.23777356743812561" green="0.66797274351119995" blue="0.83967554569244385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Oa2-yt-KPu">
@@ -117,10 +142,10 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fH8-74-UwH">
-                                        <rect key="frame" x="0.0" y="140" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="140" width="327" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSd-0M-FxZ" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="179" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="159.5" height="40"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Mfx-pk-92V">
@@ -163,7 +188,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maL-7Z-516" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                                <rect key="frame" x="187" y="0.0" width="179" height="40"/>
+                                                <rect key="frame" x="167.5" y="0.0" width="159.5" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IXS-jS-Uok">
@@ -212,37 +237,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-Bk-DYO">
-                                <rect key="frame" x="28" y="36" width="358" height="162"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="6L9-od-Fx6">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="120"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="CSW-Nc-yNN">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
-                                            </constraint>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limbitles Solutions" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-q8-Oqu">
-                                        <rect key="frame" x="0.0" y="130" width="358" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="86" id="vtc-Ww-VNS">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="32"/>
-                                            </constraint>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="112"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <variation key="heightClass=regular-widthClass=regular" alignment="fill" baselineRelativeArrangement="NO" distribution="fillEqually" spacing="0.0"/>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.00042547433986328542" green="0.22889432311058044" blue="0.41364270448684692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iDr-Bk-DYO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="0TF-do-J6o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oBa-0B-hsw" secondAttribute="trailing" constant="50" id="3K2-2u-ElL"/>
-                            <constraint firstItem="iDr-Bk-DYO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="BM2-wp-AuC"/>
+                            <constraint firstItem="iDr-Bk-DYO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Mkb-Us-WiJ"/>
                             <constraint firstItem="oBa-0B-hsw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="PQu-R4-N0L">
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
@@ -253,7 +252,8 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
                             <constraint firstItem="oBa-0B-hsw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="ZGr-TX-4qL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iDr-Bk-DYO" secondAttribute="trailing" constant="8" id="cxg-hA-2aT"/>
+                            <constraint firstItem="iDr-Bk-DYO" firstAttribute="centerX" secondItem="oBa-0B-hsw" secondAttribute="centerX" id="cOV-9n-bwG"/>
+                            <constraint firstItem="iDr-Bk-DYO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="wc2-od-AIC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -274,6 +274,8 @@
                         <outlet property="log_btn" destination="RSd-0M-FxZ" id="7jT-0X-luL"/>
                         <outlet property="password" destination="go6-qm-pLS" id="mdg-B9-wX1"/>
                         <outlet property="reg_btn" destination="maL-7Z-516" id="qga-z3-MJh"/>
+                        <outlet property="topStackView" destination="iDr-Bk-DYO" id="F8x-hb-gBa"/>
+                        <outlet property="topStackViewTopConstraint" destination="wc2-od-AIC" id="NEm-1N-R3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -285,17 +287,17 @@
             <objects>
                 <viewController id="uSN-j3-eOf" customClass="SignUpVC" customModule="Limbitless" customModuleProvider="target" sceneMemberID="viewController">
                     <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="SFP-5N-GiQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aRW-Aa-9Zz">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-TK-dlu" customClass="RoundCornersAndShadowForView" customModule="Limbitless" customModuleProvider="target">
-                                    <rect key="frame" x="26" y="80" width="362" height="283"/>
+                                    <rect key="frame" x="26" y="80" width="323" height="283"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Serial Code" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-Bh-Jt2" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="50" width="330" height="40"/>
+                                            <rect key="frame" x="16" y="50" width="291" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="TnU-ss-9OU">
@@ -320,9 +322,12 @@
                                             <variation key="heightClass=regular-widthClass=regular">
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                             </variation>
+                                            <connections>
+                                                <outlet property="delegate" destination="uSN-j3-eOf" id="mtP-xK-Nxz"/>
+                                            </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-mc-A1i" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="105" width="330" height="40"/>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-mc-A1i" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="105" width="291" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="mmx-Or-kiJ">
@@ -347,9 +352,12 @@
                                             <variation key="heightClass=regular-widthClass=regular">
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                             </variation>
+                                            <connections>
+                                                <outlet property="delegate" destination="uSN-j3-eOf" id="YY2-mc-TWZ"/>
+                                            </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-2y-SXM" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="160" width="330" height="40"/>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-2y-SXM" customClass="TextFieldCustom" customModule="Limbitless" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="160" width="291" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="KqE-q3-epG">
@@ -374,9 +382,12 @@
                                             <variation key="heightClass=regular-widthClass=regular">
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                             </variation>
+                                            <connections>
+                                                <outlet property="delegate" destination="uSN-j3-eOf" id="bCi-Xe-Hq8"/>
+                                            </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6u-D1-C8r" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="215" width="330" height="40"/>
+                                            <rect key="frame" x="16" y="215" width="291" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="vTt-m3-hSm">
@@ -404,7 +415,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-9X-ScZ" customClass="CustomButton" customModule="Limbitless" customModuleProvider="target">
-                                            <rect key="frame" x="332" y="-15" width="40" height="40"/>
+                                            <rect key="frame" x="293" y="-15" width="40" height="40"/>
                                             <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="BGD-tU-DMH">
@@ -447,7 +458,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-Yy-Ugu">
-                                            <rect key="frame" x="93.666666666666657" y="8" width="176.33333333333334" height="32"/>
+                                            <rect key="frame" x="93.5" y="8" width="137.5" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -552,6 +563,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="72" height="60"/>
+        <image name="Image-1" width="218" height="180"/>
     </resources>
 </document>

@@ -21,6 +21,11 @@ class SignUpVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let dismiss: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(dismiss)
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,13 +33,28 @@ class SignUpVC: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
     
     @IBAction func cancelRegistration(_ sender: Any) {
+        dismissKeyboard()
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func createUserAccount(_ sender: Any) {
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if let nextTextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField{
+            nextTextField.becomeFirstResponder()
+        }
+        else{
+            textField.resignFirstResponder()
+        }
+        return false
     }
     
     
